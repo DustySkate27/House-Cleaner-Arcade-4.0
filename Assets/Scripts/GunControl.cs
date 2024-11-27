@@ -16,11 +16,13 @@ public class GunControl : MonoBehaviour
     public float WaterTank;
 
     [SerializeField] private Image waterBar;
-    
 
-    public bool waterPressure1 = true;
-    public bool waterPressure2 = false;
-    public bool waterPressure3 = false;
+
+    //public bool waterPressure1 = true;
+    //public bool waterPressure2 = false;
+    //public bool waterPressure3 = false;
+
+    public int waterPressure;
 
     [SerializeField] private GameObject pressureMenuUI;
     private bool isPressureUIOpen = false;
@@ -31,8 +33,7 @@ public class GunControl : MonoBehaviour
     void Start()
     {
         broomControl = GetComponent<controles>();
-        waterPressure1 = true;
-
+        waterPressure = 1;
     }
 
     // Update is called once per frame
@@ -101,56 +102,23 @@ public class GunControl : MonoBehaviour
         gunLeft.SetActive(false);
     }
 
-
-    public void waterPressure1Active()
-    {
-        waterPressure1 = true;
-        waterPressure2 = false;
-        waterPressure3 = false;
-    }
-
-    public void waterPressure2Active()
-    {
-        waterPressure2 = true;
-        waterPressure1 = false;     
-        waterPressure3 = false;
-    }
-
-    public void waterPressure3Active()
-    {
-        waterPressure3 = true;
-        waterPressure1 = false;
-        waterPressure2 = false;
-    }
-
     private void waterPressureKey()
     {
 
         if (Input.GetKeyDown("1")){
 
-            waterPressure1 = true;
-            waterPressure2 = false;
-            waterPressure3 = false;
-
-
+            waterPressure = 1;
         }
 
        if (Input.GetKeyDown("2"))
         {
-            waterPressure2 = true;
-            waterPressure1 = false;
-            waterPressure3 = false;
-
-
+            waterPressure = 2;
         }
 
 
         if (Input.GetKeyDown("3"))
         {
-            waterPressure3 = true;
-            waterPressure1 = false;
-            waterPressure2 = false;
-
+            waterPressure = 3;
         }
 
     }

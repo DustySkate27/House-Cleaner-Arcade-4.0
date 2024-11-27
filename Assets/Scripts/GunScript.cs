@@ -11,7 +11,7 @@ public class GunScript : MonoBehaviour
 
     [SerializeField] private float waterConsumptionRate;
 
-    [SerializeField] private float consumptionTimer;
+    private float consumptionTimer;
 
     [SerializeField] private GunControl gunControl;
 
@@ -32,7 +32,7 @@ public class GunScript : MonoBehaviour
         {
             
 
-            if(gunControl.waterPressure1 == true)
+            if(gunControl.waterPressure == 1)
             {
                 water1.SetActive(true);
                 gunControl.isShooting = true;
@@ -53,7 +53,7 @@ public class GunScript : MonoBehaviour
                 }
 
             }
-            else if (gunControl.waterPressure2 == true)
+            else if (gunControl.waterPressure == 2)
             {
                 water2.SetActive(true);
                 gunControl.isShooting = true;
@@ -76,7 +76,7 @@ public class GunScript : MonoBehaviour
 
 
             }
-            else if (gunControl.waterPressure3 == true)
+            else if (gunControl.waterPressure == 3)
             {
                 water3.SetActive(true);
                 gunControl.isShooting = true;
