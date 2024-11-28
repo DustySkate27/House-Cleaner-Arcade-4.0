@@ -1966,7 +1966,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Actual Savings
+  m_text: Current Savings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8bc2a30164afdb949a86b02e9e051ccd, type: 2}
   m_sharedMaterial: {fileID: -7680034880661204312, guid: 8bc2a30164afdb949a86b02e9e051ccd, type: 2}

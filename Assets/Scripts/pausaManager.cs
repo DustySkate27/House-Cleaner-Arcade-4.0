@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class pausaManager : MonoBehaviour
 {
     [SerializeField] private GameObject pausarPanel;
-
+    [SerializeField] private GameObject escape;
 
     private void Awake()
     {
@@ -15,10 +15,15 @@ public class pausaManager : MonoBehaviour
             Time.timeScale = 0f;
             pausarPanel.SetActive(true);
         }
-        else
+        if (SceneManager.GetActiveScene().name == "nivel2")
         {
-            Time.timeScale = 1f;
-            pausarPanel.SetActive(false);
+            Time.timeScale = 0f;
+            pausarPanel.SetActive(true);
+        }
+        if (SceneManager.GetActiveScene().name == "nivel4")
+        {
+            Time.timeScale = 0f;
+            pausarPanel.SetActive(true);
         }
     }
 
@@ -38,6 +43,7 @@ public class pausaManager : MonoBehaviour
     public void pausar()
     {
         pausarPanel.SetActive(true);
+        escape.SetActive(true);
         Time.timeScale = 0f;
     }
     public void despausar()

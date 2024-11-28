@@ -10,7 +10,7 @@ public class musicPlayer : MonoBehaviour
     [SerializeField] private AudioClip storeMusic;
     private AudioSource audioSource;
 
-    private bool musicON = true;
+    public static bool musicON = true;
 
     private void Awake()
     {
@@ -73,4 +73,8 @@ public class musicPlayer : MonoBehaviour
         
     }
 
+    public void SetVolume(float volume)
+    {
+        audioSource.volume = volume;
+    }
 }
