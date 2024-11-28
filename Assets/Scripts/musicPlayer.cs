@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class musicPlayer : MonoBehaviour
 {
+    public static musicPlayer instance;
+
     [SerializeField] private AudioClip gameMusic;
     [SerializeField] private AudioClip storeMusic;
     private AudioSource audioSource;
 
-    public static musicPlayer instance;
+    private bool musicON = true;
 
     private void Awake()
     {
@@ -28,21 +30,47 @@ public class musicPlayer : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-
-        audioSource.loop = true;
-        audioSource.clip = gameMusic;
-        audioSource.Play();
+        if (musicON)
+        {
+            audioSource.loop = true;
+            audioSource.clip = gameMusic;
+            audioSource.Play();
+        }
+        
     }
 
     public void putMusic()
     {
-        audioSource.clip = gameMusic;
-        audioSource.Play();
+        if(musicON)
+        {
+            audioSource.clip = gameMusic;
+            audioSource.Play();
+        }
     }
 
     public void putStore()
     {
-        audioSource.clip = storeMusic;
-        audioSource.Play();
+        if(musicON)
+        {
+            audioSource.clip = storeMusic;
+            audioSource.Play();
+        }
     }
+
+    public void PlayStopMusic(bool activate)
+    {
+        if (activate)
+        {
+            musicON = activate;
+            audioSource.Play();
+        }
+        else
+        {
+            musicON = activate;
+            audioSource.Stop();
+        }
+        
+        
+    }
+
 }
