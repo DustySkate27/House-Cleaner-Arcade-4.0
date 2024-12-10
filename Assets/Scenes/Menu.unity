@@ -214,9 +214,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 861461138}
-        m_TargetAssemblyTypeName: musicPlayer, Assembly-CSharp
-        m_MethodName: SetVolume
+      - m_Target: {fileID: 2120955956}
+        m_TargetAssemblyTypeName: findMusicPlayer, Assembly-CSharp
+        m_MethodName: findSetVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1504,17 +1504,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1153352757138903633, guid: c9ba00bed8f8422488bd2bae63705af8, type: 3}
   m_PrefabInstance: {fileID: 2147401907}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &861461138 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8137286303473601659, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
-  m_PrefabInstance: {fileID: 1783291075}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 142325a7ec6be1541990e9c150cb7a8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &918115514
 GameObject:
   m_ObjectHideFlags: 0
@@ -5313,9 +5302,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 861461138}
-        m_TargetAssemblyTypeName: musicPlayer, Assembly-CSharp
-        m_MethodName: PlayStopMusic
+      - m_Target: {fileID: 2120955956}
+        m_TargetAssemblyTypeName: findMusicPlayer, Assembly-CSharp
+        m_MethodName: findPlayStopMusic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5426,6 +5415,7 @@ GameObject:
   - component: {fileID: 2120955952}
   - component: {fileID: 2120955951}
   - component: {fileID: 2120955955}
+  - component: {fileID: 2120955956}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -5530,6 +5520,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50971ff618e65104ca84a3efba1637de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2120955956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2120955950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb38a1f04917a7747a3b062d65bae4cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2128994428

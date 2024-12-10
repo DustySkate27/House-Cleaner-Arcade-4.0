@@ -967,17 +967,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &651336749 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8137286303473601659, guid: a112f18e965d1fe4cb449fca4ffd6915, type: 3}
-  m_PrefabInstance: {fileID: 4414577862215045923}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 142325a7ec6be1541990e9c150cb7a8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &661898206 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8417711973355693946, guid: 99e369822be56e14fa27158652b18149, type: 3}
@@ -1314,9 +1303,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 651336749}
-        m_TargetAssemblyTypeName: musicPlayer, Assembly-CSharp
-        m_MethodName: SetVolume
+      - m_Target: {fileID: 1118739022}
+        m_TargetAssemblyTypeName: findMusicPlayer, Assembly-CSharp
+        m_MethodName: findSetVolume
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2100,6 +2089,7 @@ GameObject:
   - component: {fileID: 1118739019}
   - component: {fileID: 1118739021}
   - component: {fileID: 1118739020}
+  - component: {fileID: 1118739022}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2317,6 +2307,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonSound: {fileID: 8300000, guid: 6aa236f910fd0ed42bad917526e1a86c, type: 3}
+--- !u!114 &1118739022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1118739014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb38a1f04917a7747a3b062d65bae4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1138349346 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3459261113295778107, guid: e7df161d21664554b8e6f499fd7d7acd, type: 3}
@@ -3320,9 +3322,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 651336749}
-        m_TargetAssemblyTypeName: musicPlayer, Assembly-CSharp
-        m_MethodName: PlayStopMusic
+      - m_Target: {fileID: 1118739022}
+        m_TargetAssemblyTypeName: findMusicPlayer, Assembly-CSharp
+        m_MethodName: findPlayStopMusic
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
